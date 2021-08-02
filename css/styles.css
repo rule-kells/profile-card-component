@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+	/* ### Colors ###  */
+
+	/* ## Primary ##  */
+
+	--dark-cyan: hsl(185, 75%, 39%);
+	--very-dark-desaturated: hsl(229, 23%, 23%);
+	--dark-grayish-blue: hsl(227, 10%, 46%);
+
+	/* ## Neutral ##  */
+	--dark-gray: hsl(0, 0%, 59%);
+
+	/* ## Typography ## */
+
+	/* ## Body Copy ##  */
+	/* name and stats  */
+	--fs-body: 1.13rem;
+
+	/* ## Font family ##  */
+	--ff-primary: 'Kumbh Sans', sans-serif;
+}
+
+/* general style and structure  */
+
+html {
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 100%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	background: var(--dark-cyan);
+	font-family: var(--ff-primary);
+	font-size: var(--fs-body);
+	line-height: 1.5;
+	text-align: center;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: calc(100vh - 100px);
+	height: 100%;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.card {
+	background: #fff;
+	border-radius: 0.94rem;
+	box-shadow: 0 50px 100px -20px hsla(197, 85%, 20%, 0.5);
+	overflow: hidden;
+	max-width: 21.88rem;
+}
+
+/* profile header styling  */
+
+.profile-text h1 {
+	color: var(--very-dark-desaturated);
+	font-size: var(--fs-body);
+	font-weight: 700;
+	line-height: 1.13rem;
+}
+
+.profile-text span {
+	color: var(--dark-grayish-blue);
+	font-weight: 400;
+}
+
+.profile-text small {
+	color: var(--dark-grayish-blue);
+	font-weight: 400;
+	font-size: 0.88rem;
+	line-height: 0.88rem;
+}
+
+/* social style  */
+
+.socials {
+	width: 100%;
+	border-top: 0.06rem solid hsl(228, 9%, 92%);
+	padding: 1.5em 2.5em;
+
+	display: flex;
+	flex-direction: row;
+
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+h2 {
+	color: var(--very-dark-desaturated);
+	font-weight: 700;
+	font-size: var(--fs-body);
+}
+
+.socials small {
+	color: var(--dark-grayish-blue);
+	font-weight: 400;
+	font-size: 0.63rem;
+	line-height: 0.63rem;
+}
+
+/* background images  */
+
+.bg {
+	position: relative;
+}
+
+.bg::before {
+	content: '';
+	display: block;
+	position: absolute;
+	inset: 0;
+	background-image: url('../images/bg-pattern-top.svg');
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	transform: translate(-50%, -50%);
+	background-repeat: no-repeat;
+	overflow: hidden;
+	z-index: -1;
+}
+
+.bg::after {
+	content: '';
+	inset: 0;
+	display: block;
+	position: absolute;
+	background-image: url('../images/bg-pattern-bottom.svg');
+	background-size: cover;
+
+	background-repeat: no-repeat;
+	/* background-position: right bottom; */
+	overflow: hidden;
+	transform: translate(50%, 50%);
+
+	z-index: -1;
+}
+
+/* header and profile images */
+
+.profile-header {
+	position: relative;
+}
+
+.bg-pattern-card {
+	width: 100%;
+}
+
+.profile-content {
+	padding: 4.5em 5.94em 1.5em;
+}
+
+.profile-circle {
+	position: absolute;
+	width: 96px;
+	height: 96px;
+	border-radius: 50%;
+	border: 0.31rem solid #fff;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: 30%;
+}
+
+.profile-picture {
+	border-radius: 50%;
+	max-width: 100%;
+}
+
+/* footer  */
+
+.attribution {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	font-size: 0.69rem;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
